@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Chrome Stalk Extension",
+    "icons": {
+        "16": "imgs/CaticonResize16.png",
+        "48": "imgs/CaticonResize48.png",
+        "128": "imgs/CaticonResize128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "imgs/CaticonResize16.png",
+            "48": "imgs/CaticonResize48.png",
+            "128": "imgs/CaticonResize128.png"
+        },
+        "default_title": "Chrome Stalk Extension"
+    },
+    "background": {
+        "persistent": false,
+        "page": "background.html"
+    },
+    "version": "2.0.0",
+    "permissions": [
+        "tabs", "http://*/*",
+        "background",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["jquery-2.1.1.min.js", "background.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
