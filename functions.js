@@ -1,27 +1,3 @@
-
-
-
-$(document).click(function () {
-    deleteclass(1000);
-});
-
-$(document).bind('load', function () {
-    deleteclass(1000);
-});
-
-$(window).load(function () {
-    deleteclass(1000);
-});
-
-$(document).scroll(function () {
-    deleteclass(1000);
-});
-
-
-$(document).click(function () {
-    deleteclass(1000);
-});
-
 function deleteclass(time) {
 
 
