@@ -14,7 +14,7 @@
         "persistent": false,
         "page": "background.html"
     },
-    "version": "2.2.1",
+    "version": "2.2.2",
     "permissions": [
         "tabs", "http://*/*",
         "background",
