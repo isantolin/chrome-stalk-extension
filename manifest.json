@@ -2,14 +2,10 @@
     "manifest_version": 2,
     "name": "Chrome Stalk Extension",
     "icons": {
-        "16": "imgs/CaticonResize16.png",
-        "48": "imgs/CaticonResize48.png",
         "128": "imgs/CaticonResize128.png"
     },
     "browser_action": {
         "default_icon": {
-            "16": "imgs/CaticonResize16.png",
-            "48": "imgs/CaticonResize48.png",
             "128": "imgs/CaticonResize128.png"
         },
         "default_title": "Chrome Stalk Extension"
