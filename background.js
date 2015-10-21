@@ -30,17 +30,14 @@ chrome.browserAction.onClicked.addListener(function (tab) {
         chrome.storage.local.set({'extension_status': result_extension_status});
         chrome.browserAction.setBadgeText({text: result_extension_status});
 
-        chrome.browserAction.onClicked.addListener(function (curtab) {
-            chrome.windows.getCurrent(function (win) {
-                chrome.tabs.getAllInWindow(win.id, function (tabs) {
-                    for (i in tabs) {
-                        chrome.tabs.reload(tabs[i].id);
+        chrome.windows.getCurrent(function (win) {
+            chrome.tabs.getAllInWindow(win.id, function (tabs) {
+                for (i in tabs) {
+                    chrome.tabs.reload(tabs[i].id);
 
-                    }
-                });
+                }
             });
         });
-
 
     });
 });
