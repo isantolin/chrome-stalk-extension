@@ -12,7 +12,7 @@
     },
     "background": {
         "persistent": false,
-        "page": "background.html"
+        "scripts": ["jquery-2.1.4.min.js", "functions.js", "background.js"]
     },
     "version": "2.2.2",
     "permissions": [
