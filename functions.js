@@ -1,4 +1,4 @@
-function deleteclass(time) {
+function deleteClass(time) {
 
 
     setTimeout(function () {
@@ -27,23 +27,28 @@ function deleteclass(time) {
 
 }
 
-function ruleapplier() {
+function ruleApplier() {
     $(document).ready(function () {
-        deleteclass(1000);
+        deleteClass(1000);
     });
     $(document).click(function () {
-        deleteclass(500);
+        deleteClass(500);
     });
     $(document).bind('load', function () {
-        deleteclass(10);
+        deleteClass(10);
     });
     $(window).load(function () {
-        deleteclass(1000);
+        deleteClass(1000);
     });
     $(document).scroll(function () {
-        deleteclass(10);
+        deleteClass(10);
     });
     $(document).click(function () {
-        deleteclass(10);
+        deleteClass(10);
     });
+}
+
+function changesApplier(value) {
+    chrome.storage.local.set({'extension_status': value});
+    chrome.browserAction.setBadgeText({text: value});
 }

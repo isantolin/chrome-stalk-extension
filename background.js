@@ -8,11 +8,12 @@ chrome.storage.local.get('extension_status', function (result) {
     }
 
     if (result_extension_status === 'On') {
-        ruleapplier();
+        ruleApplier();
 
+    } else {
+        result_extension_status = 'Off';
     }
-
-    chrome.browserAction.setBadgeText({text: result_extension_status});
+    changesApplier(result_extension_status);
 
 });
 
@@ -29,9 +30,6 @@ if (typeof chrome.browserAction !== "undefined") {
                 result_extension_status = 'On';
             }
 
-            chrome.storage.local.set({'extension_status': result_extension_status});
-            chrome.browserAction.setBadgeText({text: result_extension_status});
-
             chrome.windows.getCurrent(function (win) {
                 chrome.tabs.getAllInWindow(win.id, function (tabs) {
                     for (i in tabs) {
@@ -40,17 +38,19 @@ if (typeof chrome.browserAction !== "undefined") {
                     }
                 });
             });
-
+            changesApplier(result_extension_status);
         });
     });
 }
+
+
 
 chrome.storage.onChanged.addListener(
         function (changes, namespace) {
 
             if (changes.extension_status.newValue === 'Off') {
+            } else if (changes.extension_status.newValue === 'On') {
+                ruleApplier();
             }
-            else if (changes.extension_status.newValue === 'On') {
-                ruleapplier();
-            }
+            changesApplier(changes.extension_status.newValue);
         });

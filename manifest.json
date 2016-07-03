@@ -12,9 +12,9 @@
     },
     "background": {
         "persistent": false,
-        "scripts": ["jquery-2.1.4.min.js", "functions.js", "background.js"]
+        "scripts": ["jquery-3.0.0.min.js", "functions.js", "background.js"]
     },
-    "version": "2.2.2",
+    "version": "2.3.0",
     "permissions": [
         "tabs", "http://*/*",
         "background",
@@ -24,7 +24,7 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["jquery-2.1.4.min.js", "functions.js", "background.js"],
+            "js": ["jquery-3.0.0.min.js", "functions.js", "background.js"],
             "run_at": "document_end"
         }
     ]
