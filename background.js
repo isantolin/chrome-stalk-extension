@@ -10,7 +10,7 @@ function ruleApplier() {
         document.querySelectorAll("[data-testid=placementTracking]").forEach(e => e.remove());
         document.querySelectorAll("[data-testid*='follow']").forEach(e => e.remove());
         document.querySelectorAll("[aria-label='Add Friend']").forEach(e => e.remove());
-        document.querySelectorAll("[aria-label='Like']").forEach(e => e.remove());
+        document.querySelectorAll("[aria-label='React']").forEach(e => e.remove());
 
     });
 };
