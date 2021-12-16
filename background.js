@@ -3,7 +3,7 @@ function ruleApplier() {
     document.querySelectorAll("[data-testid=placementTracking]").forEach(e => e.remove());
     document.querySelectorAll("[data-testid*='follow']").forEach(e => e.remove());
     document.querySelectorAll("[aria-label='Add Friend']").forEach(e => e.remove());
-    document.querySelectorAll("[aria-label='Like']").forEach(e => e.remove());
+    document.querySelectorAll("[aria-label='React']").forEach(e => e.remove());
 
     document.addEventListener('scroll', function () {
         document.querySelectorAll("[data-testid=like]").forEach(e => e.remove());
@@ -13,9 +13,9 @@ function ruleApplier() {
         document.querySelectorAll("[aria-label='Like']").forEach(e => e.remove());
 
     });
-}
-;
+};
 
+// Initialization
 chrome.storage.local.get('extension_status', function (result) {
     result_extension_status = result.extension_status;
 
