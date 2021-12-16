@@ -2,7 +2,7 @@
     "name": "Chrome Stalk Extension",
     "action": {},
     "manifest_version": 3,
-    "version": "3.0.0",
+    "version": "3.0.2",
     "icons": {
         "128": "imgs/CaticonResize128.png"
     },
@@ -20,7 +20,7 @@
         "scripting"
     ],
     "host_permissions": [
-        "*://*/*"
+        "https://www.facebook.com/*","https://twitter.com/*"
     ],
     "optional_permissions": [
         "unlimitedStorage"
